@@ -6,7 +6,7 @@ $(document).ready(function () {
  $(".swchar").on("click", function(){
     //  grab val from button
     var chr=($(this).attr("data-name"));
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + chr + "&api_key=T5QXIjtQUGMUSWQFMOm1pco71dqxGs4L"
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + chr + "&api_key=T5QXIjtQUGMUSWQFMOm1pco71dqxGs4L&limit=10"
     $.ajax({
         url: queryURL,
         method: "GET"
