@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var swchar = ["yoda", "Chewbacca", "Luke Skywalker", "trump"];
+    var swchar = ["yoda", "Chewbacca", "Luke Skywalker", "Princess Lea"];
     startbuttons();
   
  $(".swchar").on("click", function(){
