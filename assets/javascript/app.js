@@ -2,8 +2,9 @@ $(document).ready(function () {
 
     var swchar = ["yoda", "Chewbacca", "Luke Skywalker", "Princess Lea"];
     startbuttons();
-  
- $(".swchar").on("click", function(){
+//   on click for dym button need the Document.body
+
+ $(document.body).on("click",".swchar", function(){
     //  grab val from button
     var chr=($(this).attr("data-name"));
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + chr + "&api_key=T5QXIjtQUGMUSWQFMOm1pco71dqxGs4L&limit=10"
@@ -40,6 +41,7 @@ for(i=0; i < results.length; i++){
     var usrchr =$("#userchoice").val()
     swchar.push(usrchr);
     $("#userchoice").val("");
+    console.log(userchoice);
     startbuttons()
  })
 
@@ -55,10 +57,10 @@ for(i=0; i < results.length; i++){
     }
 
 
-    function displaySWC() {
-        var char = $(this).attr("data-name");
+    // function displaySWC() {
+    //     var char = $(this).attr("data-name");
 
-    }
+   //}
 }
 
 )
