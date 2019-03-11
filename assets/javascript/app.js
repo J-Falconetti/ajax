@@ -17,6 +17,7 @@ $(document).ready(function () {
 console.log(response)
 var results = response.data;
 for(i=0; i < results.length; i++){
+    if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
     var stardiv = $("<div>");
     var p = $("<p>").text("raiting: " + results[i].rating);
     var starimg = $("<img>");
@@ -27,7 +28,7 @@ for(i=0; i < results.length; i++){
 
 
 }
-
+}
 
 
     })
