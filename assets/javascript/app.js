@@ -12,8 +12,22 @@ $(document).ready(function () {
         method: "GET"
     }).
     
-    done(function (response) {
-        console.log(response)
+    then(function (response) {
+        console.log(queryURL)
+console.log(response)
+var results = response.data;
+for(i=0; i < results.length; i++){
+    var stardiv = $("<div>");
+    var p = $("<p>").text("raiting: " + results[i].rating);
+    var starimg = $("<img>");
+    starimg.attr("src", results[i].images.fixed_height.url);
+    stardiv.append(p);
+    stardiv.append(starimg);
+    $("#gifpics").prepend(stardiv);
+
+
+}
+
 
 
     })
