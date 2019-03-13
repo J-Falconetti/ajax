@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  
+  // start buttons
   function startbuttons() {
     $("#buttons").empty();
     for (let i = 0; i < swchar.length; i++) {
@@ -33,13 +33,13 @@ for(i=0; i < results.length; i++){
 // if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
  var stardiv = $("<div>");
 
-  
+  // results--
 var starimg = results[i];
 
 
   var starimgURL = starimg.images.fixed_width.url;
   var starimgStill = starimg.images.fixed_width_still.url;
-
+// used for showing and frezzing gif images
   var image = $('<img>').attr('src', starimgURL);
   image.attr('data-still', starimgStill);
   image.attr('data-animate', starimgURL);
@@ -56,7 +56,7 @@ var starimg = results[i];
                   });
   
  
-
+// raiting
   var p = $("<p>").text("raiting: " + results[i].rating);
   $(stardiv).append(image)
   $("#gifpics").prepend(stardiv);
@@ -70,7 +70,7 @@ var starimg = results[i];
 
 )
 $("#clicker").on("click", function(){
-  
+  // adds user choice buttons
   var usrchr =$("#userchoice").val()
   swchar.push(usrchr);
   $("#userchoice").val("");
